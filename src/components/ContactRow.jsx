@@ -1,10 +1,7 @@
 const ContactRow = (contact) => {
   return (
     <tr>
-      <td>
-        {contact.contact.name} <br/>
-        <button>More Info</button>
-      </td>
+      <td><a onClick={() => console.log(`hello`)}>{contact.contact.name}</a></td>
       <td>{contact.contact.phone}</td>
       <td>{contact.contact.email}</td>
     </tr>

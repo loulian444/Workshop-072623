@@ -1,8 +1,11 @@
-import ContactInfo from "./ContactData";
-
 const ContactRow = ({ contact, setSelectedContactId }) => {
+
+  const sendId = () => {
+    setSelectedContactId(contact.id)
+  };  
+
   return (
-    <tr onClick={setSelectedContactId}>
+    <tr onClick={sendId}>
       <td>{contact.name}</td>
       <td>{contact.phone}</td>
       <td>{contact.email}</td>

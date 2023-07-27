@@ -1,9 +1,11 @@
-const ContactRow = (contact) => {
+import ContactInfo from "./ContactData";
+
+const ContactRow = ({ contact, setSelectedContactId }) => {
   return (
-    <tr>
-      <td><a onClick={() => console.log(`hello`)}>{contact.contact.name}</a></td>
-      <td>{contact.contact.phone}</td>
-      <td>{contact.contact.email}</td>
+    <tr onClick={setSelectedContactId}>
+      <td>{contact.name}</td>
+      <td>{contact.phone}</td>
+      <td>{contact.email}</td>
     </tr>
   );
 };
